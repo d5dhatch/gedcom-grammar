@@ -1,0 +1,18 @@
+{
+  "name": "language-gedcom",
+  "main": "./lib/gecom-grammar",
+  "version": "0.0.1",
+  "description": "Gedcom grammar",
+  "keywords": ["gedcom", "genealogy","ged",".ged", "family tree"
+  ],
+  "activationCommands": {
+    "atom-workspace": "language-gedcom:toggle"
+  },
+  "repository": "https://github.com/d5dhatch/gedcom-tools",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

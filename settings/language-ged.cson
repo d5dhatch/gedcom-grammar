@@ -1,0 +1,5 @@
+'.source.ged':
+  'editor':
+    'foldEndPattern': '\\*\\)'
+    'commentStart': '(*'
+    'commentEnd': '*)'

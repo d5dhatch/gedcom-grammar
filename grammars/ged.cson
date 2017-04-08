@@ -1,0 +1,39 @@
+name: "GEDCOM"
+scopeName: "source.gedcom"
+fileTypes: [
+	"ged"
+]
+patterns: [
+	{
+		match: "((^0)\\s+|(^1)\\s+|(^2)\\s+|(^3)\\s+|(^4)\\s+|(^5)\\s+)(((@\\S+@)(\\s(.{4})))|((((.{4})(\\s(@\\S+@))))|(((.{4})(.+))))|((.{4})))";
+		captures:
+			"2":
+				name: "ged.level.level0.gedcom"
+			"3":
+				name: "ged.level.level1.gedcom"
+			"4":
+				name: "ged.level.level2.gedcom"
+			"5":
+				name: "ged.level.level3.gedcom"
+			"6":
+				name: "ged.level.level4.gedcom"
+			"7":
+				name: "ged.level.level5.gedcom"
+			"10":
+				name: "ged.xrefID.gedcom"
+			"12":
+				name: "ged.type.gedcom"
+			"16":
+				name: "ged.type.gedcom"
+			"18":
+				name: "ged.xrefID.gedcom"
+			"21":
+				name: "ged.type.gedcom"	
+			"22":
+				name: "ged.description.gedcom"
+			"23":
+				name: "ged.type.gedcom"
+	}
+]
+
+
