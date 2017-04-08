@@ -1,6 +1,6 @@
 # GEDCOM Grammar support
 
-Very early version of getting GEDCOM files to look right. Only works with gedcom-theme-syntax.
+Very early version of getting GEDCOM files to look right. Requires gedcom-theme-syntax: https://atom.io/themes/gedcom-theme-syntax (https://atom.io/themes/gedcom-theme-syntax_)
 
 Written by David M. Hatch 
 
