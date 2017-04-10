@@ -5,7 +5,7 @@ fileTypes: [
 ]
 patterns: [
 	{
-		match: "((^0)\\s+|(^1)\\s+|(^2)\\s+|(^3)\\s+|(^4)\\s+|(^5)\\s+)(((@\\S+@)(\\s(.{4})))|((((.{4})(\\s(@\\S+@))))|(((.{4})(.+))))|((.{4})))";
+		match: "^((^0)|(^1)|(^2)|(^3)|(^4)|(^5)) ((([A-Za-z0-9_]+) (@[^@]+@))|(@[^@]+@ |)([A-Za-z0-9_]+))([^\\n\\r]*|)$";
 		captures:
 			"2":
 				name: "ged.level.level0.gedcom"
@@ -19,21 +19,15 @@ patterns: [
 				name: "ged.level.level4.gedcom"
 			"7":
 				name: "ged.level.level5.gedcom"
-			"10":
+			"11":
 				name: "ged.xrefID.gedcom"
 			"12":
-				name: "ged.type.gedcom"
-			"16":
-				name: "ged.type.gedcom"
-			"18":
 				name: "ged.xrefID.gedcom"
-			"21":
-				name: "ged.type.gedcom"	
-			"22":
-				name: "ged.description.gedcom"
-			"23":
+			"13":
 				name: "ged.type.gedcom"
+			"10":
+				name: "ged.type.gedcom"	
+			"14":
+				name: "ged.description.gedcom"
 	}
 ]
-
-
