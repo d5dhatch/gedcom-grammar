@@ -1,7 +1,7 @@
 {
   "name": "language-gedcom",
   "main": "./lib/gecom-grammar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Gedcom grammar",
   "keywords": [
     "gedcom",
