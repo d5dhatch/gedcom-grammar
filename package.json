@@ -1,7 +1,8 @@
 {
   "name": "language-gedcom",
-  "main": "./lib/gecom-grammar",
-  "version": "1.1.1",
+  "displayName": "GEDCOM Grammar",
+  "publisher": "local",
+  "version": "1.11.0",
   "description": "Gedcom grammar",
   "keywords": [
     "gedcom",
@@ -10,13 +11,26 @@
     ".ged",
     "family tree"
   ],
-  "activationCommands": {
-    "atom-workspace": "language-gedcom:toggle"
-  },
   "repository": "https://github.com/d5dhatch/gedcom-grammar",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "vscode": "^1.80.0"
   },
-  "dependencies": {}
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "gedcom",
+        "aliases": ["GEDCOM"],
+        "extensions": [".ged", ".gedcom"]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gedcom",
+        "scopeName": "source.gedcom",
+        "path": "./syntaxes/gedcom.tmLanguage.json"
+      }
+    ]
+  }
 }

@@ -1,0 +1,437 @@
+{
+  "name": "GEDCOM",
+  "scopeName": "source.gedcom",
+  "fileTypes": ["ged"],
+  "indentationRules": {
+    "increaseIndentPattern": "^\\s*\\d+\\s+(?!0\\b)",
+    "decreaseIndentPattern": "^\\s*\\d+\\s+(?!\\d+\\s)"
+  },
+  "patterns": [
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(0)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level0.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(1)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level1.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(2)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level2.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(3)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level3.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(4)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level4.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(NAME|GIVN|SURN|NSFX)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.name.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(SOUR)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.source.gedcom" },
+        "4": { "name": "ged.value.source.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(PAGE)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.page.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(DATA)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.data.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(TEXT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.text.gedcom" },
+        "4": { "name": "ged.value.text.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?(CONC|CONT)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.conc.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(FAMC|FAMS|OBJE|SOUR)\\s+(@[^@]+@)$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.tag.gedcom" },
+        "3": { "name": "ged.xref.gedcom" }
+      }
+    },
+    {
+      "match": "^(5)\\s+(?:(@[^@]+@)\\s+)?([A-Za-z0-9_]+)(?:\\s+(.*))?$",
+      "captures": {
+        "1": { "name": "ged.level.level5.gedcom" },
+        "2": { "name": "ged.xref.gedcom" },
+        "3": { "name": "ged.tag.gedcom" },
+        "4": { "name": "ged.value.gedcom" }
+      }
+    }
+  ]
+}
